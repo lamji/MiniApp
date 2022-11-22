@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Force color on husky
+if [ -t 2 ]; then
+  exec >/dev/tty 2>&1
+fi
+
+echo '-----------------------------------'
+echo '|-RUNNING PRE-COMMITING CHECKS...-|'
+echo '-----------------------------------'
+
+npm run lint

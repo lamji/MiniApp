@@ -1,0 +1,116 @@
+<Meta title="Coding Convention" />
+
+# Coding Convention
+
+Please follow our standard convention
+
+## 📁 Folder Naming
+
+- Use only `kebab-case` + `lowercase` on `common` folder.
+- Use `PascalCase` on `mini-app` and `components` folder.
+- Add `-v2` when creating another version of mini app.
+
+```
+src
+├── common
+|   ├── hooks
+|   ├── styles
+|   └── other-folder
+├── components
+|   ├── Button
+|   └── List
+└── mini-app
+    ├── Cart
+    ├── Checkout
+    └── Checkout-v2
+```
+
+## 📄 File Naming
+
+- Use `camelCase` for types, redux, and other files mostly used in common folder.
+- Use `PascalCase` for mini-app and components files.
+- Always start with word `use` on hooks files.
+
+```
+src
+├── common
+|   ├── hooks
+|   |   └── useCart.ts
+|   ├── styles
+|   |   └── button.css
+|   └── other-folder
+|       └── otherFiles.ts
+├── components
+|   ├── Button
+|   |   └── index.ts
+|   ├── List
+|   |   └── index.ts
+|   └── Pagination.tsx
+└── mini-app
+    ├── Cart
+    |   └── index.tsx
+    ├── Checkout
+    └── Checkout-v2
+```
+
+## 📌 File Extension
+
+- Use `.tsx` for mini-app, and components files.
+- Use `.ts` common files.
+
+```
+├── useHelper.ts
+├── Button.tsx
+├── index.tsx
+```
+
+## 📙 Variable, Object, Function Name Convention
+
+- Use `camelCase`
+
+```ts
+// Variable
+const isVisible = false;
+// Use singular word for single value
+const invoiceStatus = 'Pending';
+// Use plural word for multiple values
+const invoiceStatuses = ['Pending', 'Paid'];
+
+// Object
+const userDetails = {
+  firstName: 'Antonio',
+  lastName: 'Luna',
+  age: 32,
+};
+
+// Function
+// Use action word for functions
+const handleChange = () => {};
+```
+
+## 📗 Types or Interface Naming
+
+- Use `"T"` or `"I"` + `PascalCase`
+
+```ts
+// Type format: "T" + Name
+type TButtonName = string;
+
+// Interface format: "I" + Name
+interface IButton {
+  name: string;
+  color: string;
+}
+```
+
+## 📘 Function Argument Rules
+
+- use `object` when two or more arguments will be passed.
+
+```ts
+// One argument
+const handleChange = (event) => {};
+
+// Two or more arguments
+const handleChange = ({ id, values }) => {};
+```

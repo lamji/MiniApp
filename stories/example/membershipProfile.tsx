@@ -1,0 +1,56 @@
+export const Primary = {
+  dataLoad: { value: 10 },
+  dataIn: {
+    action: {
+      onRenew: (args: any) => alert('renew'),
+      onUnlink: (args: any) => alert('unlink'),
+    },
+    styles: {
+      root: {},
+      ScrollView: {},
+      cardInfoContainer: {},
+      cardContainer: {},
+      title: {},
+      titleContainerStyle: {},
+      barcodeContainer: {},
+      buttonGroupContainer: {},
+      button: {},
+      buttonGroupLabel: {},
+      divider: {},
+      footerContainer: {},
+      footer: {},
+    },
+    customCardDetailsComponent: '',
+    showCard: true,
+    showBarcode: true,
+    showButtonGroup: true,
+    buttonGroupLabels: {
+      primaryButtonLabel: '',
+      secondaryButtonLabel: '',
+    },
+    cardInfo: {
+      details: {
+        businessName: 'JML Corp',
+        expDate: '10/22',
+        name: 'Jick Lampago',
+        number: '1000020148660012',
+      },
+      styles: {
+        card: {},
+        cardNumber: {},
+        details: {},
+        exp: {},
+        expLabel: {},
+        expandContainer: {},
+        expirationContainer: {},
+        footer: {},
+        imageContainer: {},
+        nameContainer: {},
+        nameExpirationContainer: {},
+      },
+      type: 'business',
+    },
+  },
+
+  dataOut: (value: number) => console.log('DATA OUT', value),
+};
